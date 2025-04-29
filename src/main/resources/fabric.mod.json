@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "custom-gem",
+	"version": "${version}",
+	"name": "Custom Gem",
+	"description": "This is a trial mod by Makion",
+	"authors": [
+		"Makion!"
+	],
+	"contact": {
+		"homepage": "https://makion.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/custom-gem/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.makion.customgem.CustomGem"
+		],
+		"fabric-datagen": [
+			"net.makion.customgem.CustomGemDataGenerator"
+		],
+		"client": [
+			"net.makion.customgem.CustomGemClient"
+		]
+	},
+	"mixins": [
+		"custom-gem.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
